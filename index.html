@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #canvas{
+                border: 2px solid black;
+                background: #dddddd;
+            }
+            #form{
+                float: right;
+                width: 70%;
+                margin: 10px;
+                padding: 10px;
+            }
+        </style>
+        <title> Circulatory and Lymphatic Systems </title>
+    </head>
+    <body>
+            <h1> Circulatory and Lymphatic Systems </h1>
+            <hr>
+            <h3> Boris Radulov and Alexander Zhelyazkov </h3>
+            <canvas id="canvas" height="800" width="400"></canvas>
+            <script src="js/interactive.js"></script>
+            <form id="form">
+                <input type="checkbox" checked> <label>Body </label> <br/> <br/>
+                <input type="checkbox" checked> <label> Heart </label> <br/> <br/>
+                <input type="checkbox" checked> <label> Subclavian Veins </label> <br/> <br/>
+                <input type="checkbox" checked> <label> Spleen </label> <br/> <br/>
+                <input type="checkbox" checked> <label> Thymus </label> <br/> <br/>
+                <input type="checkbox" checked> <label> Veins </label> <br/> <br/>
+                <input type="checkbox" checked> <label> Arteries </label> <br/> <br/>
+                <input type="checkbox" checked> <label> Lymphatic Vessels </label> <br/> <br/>
+                <input type="checkbox" checked> <label> Lymphatic Nodes </label> <br/> <br/>
+                <button type="submit" onclick="change()"> Change! </button>
+            </form>
+    </body>
+</html>
