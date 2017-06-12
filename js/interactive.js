@@ -92,5 +92,15 @@ setInterval(draw, 16.6);
 
 //UTILS
 function change(checkbox){
-    draws[parseInt(checkbox.name)] = checkbox.checked;
+    if(checkbox.name == "9"){
+        for(var i = 1; i < 5; i++){
+            draws[i] = checkbox.checked;
+        }
+    }else if(checkbox.name == "10"){
+        for(var i = 5; i < 10; i++){
+            draws[i] = checkbox.checked;
+        }
+    }else{
+        draws[parseInt(checkbox.name)] = checkbox.checked;
+    }
 }
