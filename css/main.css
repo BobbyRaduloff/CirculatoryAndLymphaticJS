@@ -9,10 +9,14 @@
     width: 420px;
 }
 
-#form, #text{
+#form, #text, #spec{
     flex: 1;
     margin: 10px;
     padding: 10px;
+}
+
+#spec{
+    margin: 50px;
 }
 
 .dropdown {
