@@ -63,15 +63,16 @@ for(var i = 0; i < 9; i++){
 images[0].src = "images/body.png";
 images[1].src = "images/heart.png";
 images[2].src = "images/subv.png";
-images[3].src = "images/spleen.png";
-images[4].src = "images/thymus.png";
-images[5].src = "images/veins.png";
-images[6].src = "images/arteries.png";
+images[3].src = "images/veins.png";
+images[4].src = "images/arteries.png";
+images[5].src = "images/spleen.png";
+images[6].src = "images/thymus.png";
 images[7].src = "images/lvessels.png";
 images[8].src = "images/lnodes.png";
 var sprites = new Array(9);
 for(var i = 0; i < 9; i++){
     sprites[i] = new Sprite(ctx, 100, 200, images[i]);
+    sprites[i].y -= 10;
 }
 var draws = new Array(9);
 for(var i = 0; i < 9; i++){
@@ -92,5 +93,4 @@ setInterval(draw, 16.6);
 //UTILS
 function change(checkbox){
     draws[parseInt(checkbox.name)] = checkbox.checked;
-    //setInterval(draw, 16.6);
 }
