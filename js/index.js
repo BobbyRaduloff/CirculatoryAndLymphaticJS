@@ -1,23 +1,6 @@
-//GLOBAL VARIABLES
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.imageSmoothingEnabled = false;
-var currMouse = {x: 0, y: 0};
-var checks = document.getElementById("form");
-
-//CLASS DEFINITIONS
-class Rectangle{
-    constructor(x, y, width, height){
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
-    }
-
-    contains(mx, my){
-        return (mx >= this.x && mx <= this.x + this.width && my >= this.y && my <= this.y + this.height);
-    }
-}
 
 class Sprite{
     constructor(ctx, width, height, image){
@@ -43,19 +26,6 @@ class Sprite{
     }
 }
 
-//EVENT HANDLERS
-function getMousePos(canvas, evt){
-    var rect = canvas.getBoundingClientRect();
-    return {
-        x: evt.clientX - rect.left,
-        y: evt.clientY - rect.top
-    };
-}
-canvas.addEventListener("mousemove", function(evt) {
-    currMouse = getMousePos(canvas, evt);
-}, false);
-
-//GAME VARIABLES
 var images = new Array(9);
 for(var i = 0; i < 9; i++){
     images[i] = new Image();
@@ -79,26 +49,26 @@ for(var i = 0; i < 9; i++){
     draws[i] = true;
 }
 
-//MAIN FUNCTION
+ctx.scale(4, 4);
 function draw(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.scale(4, 4);
     for(var i = 0; i < 9; i++){
         if(draws[i]) sprites[i].render();
     }
-    ctx.scale(0.25, 0.25);
 }
 setInterval(draw, 16.6);
 
-//UTILS
 function change(checkbox){
     if(checkbox.name == "9"){
-        for(var i = 1; i < 5; i++){
+        for(var i = 1; i <= 5; i++){
             draws[i] = checkbox.checked;
+            document.getElementById("form").elements[i].checked = checkbox.checked;
         }
     }else if(checkbox.name == "10"){
-        for(var i = 5; i < 10; i++){
+        for(var i = 5; i <= 10; i++){
             draws[i] = checkbox.checked;
+            checkbox.setAttribute("checked", checkbox.checked);
+            document.getElementById("form").elements[i].checked = checkbox.checked;
         }
     }else{
         draws[parseInt(checkbox.name)] = checkbox.checked;

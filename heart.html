@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #parent{
+                display: flex;
+                font-size: 25px;
+            }
+            #canvas{
+                border: 2px solid black;
+                background: #dddddd;
+                width: 420px;
+            }
+            #text{
+                flex: 1;
+                margin: 10px;
+                padding: 10px;
+            }
+        </style>
+        <title> The Heart </title>
+    </head>
+    <body>
+            <h1> Interactive Presentation: The Heart </h1>
+            <hr>
+            <h3> Boris Radulov and Alexander Zhelyazkov, 9/7 </h3>
+            <div id="parent">
+                <canvas id="canvas" height="400" width="400"></canvas>
+                <script src="js/heart.js"></script>
+                <p id="text">
+                    <a href="index.html"> &larr; Back </a>
+                </p>
+            </div>
+    </body>
+</html>
