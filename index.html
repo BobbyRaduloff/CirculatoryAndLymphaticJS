@@ -2,22 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <style>
-            #parent{
-                display: flex;
-                font-size: 25px;
-            }
-            #canvas{
-                border: 2px solid black;
-                background: #dddddd;
-                width: 420px;
-            }
-            #form{
-                flex: 1;
-                margin: 10px;
-                padding: 10px;
-            }
-        </style>
+        <link rel="stylesheet" href="css/main.css">
         <title> Circulatory and Lymphatic Systems </title>
     </head>
     <body>
@@ -29,16 +14,40 @@
                 <script src="js/index.js"></script>
                 <form id="form">
                     <h3> <input type="checkbox" name="0" onclick="change(this)" checked> Body </h3>
-                    <h3> <input type="checkbox" name="9" onclick="change(this)" checked> Circulatory System </h3>
-                    <input type="checkbox" name="1" onclick="change(this)" checked> <label> <a href="heart.html"> Heart </a> </label> <br/> <br/>
-                    <input type="checkbox" name="2" onclick="change(this)" checked> <label> Subclavian Veins </label> <br/> <br/>
-                    <input type="checkbox" name="3" onclick="change(this)" checked> <label> Veins </label> <br/> <br/>
-                    <input type="checkbox" name="4" onclick="change(this)" checked> <label> Arteries </label> <br/> <br/>
-                    <h3> <input type="checkbox" name="10" onclick="change(this)" checked> Lymphatic System </h3>
-                    <input type="checkbox" name="5" onclick="change(this)" checked> <label> Spleen </label> <br/> <br/>
-                    <input type="checkbox" name="6" onclick="change(this)" checked> <label> Thymus </label> <br/> <br/>
-                    <input type="checkbox" name="7" onclick="change(this)" checked> <label> <a href="nodes.html"> Lymphatic Vessels </a> </label> <br/> <br/>
-                    <input type="checkbox" name="8" onclick="change(this)" checked> <label> Lymphatic Nodes </label> <br/> <br/>
+                    <h3> <input type="checkbox" name="9" onclick="change(this)"> Circulatory System </h3>
+                    <input type="checkbox" name="1" onclick="change(this)"> <label class="dropdown">
+                        <a href="heart.html"> Heart </a>
+                        <p class="dropdown-content"> </p>
+                    </label> <br/> <br/>
+                    <input type="checkbox" name="2" onclick="change(this)"> <label class="dropdown">
+                        Subclavian Veins
+                        <p class="dropdown-content"> </p>
+                    </label> <br/> <br/>
+                    <input type="checkbox" name="3" onclick="change(this)"> <label class="dropdown">
+                        Veins
+                        <p class="dropdown-content"> </p>
+                    </label> <br/> <br/>
+                    <input type="checkbox" name="4" onclick="change(this)"> <label class="dropdown">
+                        Arteries
+                        <p class="dropdown-content"> </p>
+                    </label> <br/> <br/>
+                    <h3> <input type="checkbox" name="10" onclick="change(this)"> Lymphatic System </h3>
+                    <input type="checkbox" name="5" onclick="change(this)"> <label class="dropdown">
+                        Spleen
+                        <p class="dropdown-content"> </p>
+                    </label> <br/> <br/>
+                    <input type="checkbox" name="6" onclick="change(this)"> <label class="dropdown">
+                        Thymus
+                        <p class="dropdown-content"> </p>
+                    </label> <br/> <br/>
+                    <input type="checkbox" name="7" onclick="change(this)"> <label class="dropdown">
+                        <a href="nodes.html"> Lymphatic Vessels </a>
+                        <p class="dropdown-content"> </p>
+                    </label> <br/> <br/>
+                    <input type="checkbox" name="8" onclick="change(this)"> <label class="dropdown">
+                        Lymphatic Nodes
+                        <p class="dropdown-content"> </p>
+                    </label> <br/> <br/>
                 </form>
             </div>
     </body>
