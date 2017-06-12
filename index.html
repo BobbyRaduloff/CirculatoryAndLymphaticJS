@@ -9,7 +9,7 @@
             }
             #form{
                 float: right;
-                width: 70%;
+                width: 60%;
                 margin: 10px;
                 padding: 10px;
             }
@@ -23,16 +23,15 @@
             <canvas id="canvas" height="800" width="400"></canvas>
             <script src="js/interactive.js"></script>
             <form id="form">
-                <input type="checkbox" checked> <label>Body </label> <br/> <br/>
-                <input type="checkbox" checked> <label> Heart </label> <br/> <br/>
-                <input type="checkbox" checked> <label> Subclavian Veins </label> <br/> <br/>
-                <input type="checkbox" checked> <label> Spleen </label> <br/> <br/>
-                <input type="checkbox" checked> <label> Thymus </label> <br/> <br/>
-                <input type="checkbox" checked> <label> Veins </label> <br/> <br/>
-                <input type="checkbox" checked> <label> Arteries </label> <br/> <br/>
-                <input type="checkbox" checked> <label> Lymphatic Vessels </label> <br/> <br/>
-                <input type="checkbox" checked> <label> Lymphatic Nodes </label> <br/> <br/>
-                <button type="submit" onclick="change()"> Change! </button>
+                <input type="checkbox" name="0" onclick="change(this)" checked> <label>Body </label> <br/> <br/>
+                <input type="checkbox" name="1" onclick="change(this)" checked> <label> Heart </label> <br/> <br/>
+                <input type="checkbox" name="2" onclick="change(this)" checked> <label> Subclavian Veins </label> <br/> <br/>
+                <input type="checkbox" name="3" onclick="change(this)" checked> <label> Spleen </label> <br/> <br/>
+                <input type="checkbox" name="4" onclick="change(this)" checked> <label> Thymus </label> <br/> <br/>
+                <input type="checkbox" name="5" onclick="change(this)" checked> <label> Veins </label> <br/> <br/>
+                <input type="checkbox" name="6" onclick="change(this)" checked> <label> Arteries </label> <br/> <br/>
+                <input type="checkbox" name="7" onclick="change(this)" checked> <label> Lymphatic Vessels </label> <br/> <br/>
+                <input type="checkbox" name="8" onclick="change(this)" checked> <label> Lymphatic Nodes </label> <br/> <br/>
             </form>
     </body>
 </html>

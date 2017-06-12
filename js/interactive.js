@@ -90,9 +90,7 @@ function draw(){
 setInterval(draw, 16.6);
 
 //UTILS
-function change(){
-    for(var i = 0; i < 9; i++){
-        draws[i] = document.getElementById("form").elements[i].value == "on";
-    }
-    return false;
+function change(checkbox){
+    draws[parseInt(checkbox.name)] = checkbox.checked;
+    //setInterval(draw, 16.6);
 }
